@@ -7,7 +7,7 @@ select
 	nvl(a.en_pay_ratio, 0) installment_pay_rate,
 	nvl(a.en_pay_amount, 0) installment_pay_balance,
 	a.l_end_date expire_pay_date
-from tbondpayratio a, tstockinfo b, jc_tconvertintercode c, jc_tconvertmarketno d
+from tbondpayratio a, tstockinfo  b, jc_tconvertintercode c, jc_tconvertmarketno d
 where a.vc_inter_code = b.vc_inter_code(+)
 and b.c_market_no = d.market_no_src
 and d.market_no = c.market_no
